@@ -9,7 +9,10 @@
    项目 CI/CD 变量。
    群组 CI/CD 变量。
    实例 CI/CD 变量。
-3、说一些常用的预设变量
+   在控制面板配置变量
+3、如何在流水线报错时发送通知  
+when on_failure 执行 脚本调用发送通知
+4、说一些常用的预设变量
  官方链接 https://docs.gitlab.cn/jh/ci/variables/predefined_variables.html
     合并请求流水线的预定义变量
         这些变量在以下情况下可用：
@@ -26,12 +29,15 @@
       使用场景  通过判断label 做一些自动处理，如自动发布
     CI_COMMIT_REF_NAME 项目的分支名或tag名
     CI_COMMIT_REF_SLUG  CI_COMMIT_REF_NAME的小写形式。项目的分支名或tag名
+5、引入外部流水线文件有那几种方式
+ 使用include local、remote 和template
+6、提取流水线中的公共配置有哪些方式
+  include
+7、如何在线调试流水线
+ 控制面板打开debug
 
 
 
 
-       
-    
 
 
-3、如何在流水线报错时发送通知
