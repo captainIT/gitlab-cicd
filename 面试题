@@ -1,3 +1,37 @@
+问题来源 https://blog.csdn.net/github_35631540/article/details/123187010
 1、cache与artifacts的区别？
   官方链接 https://docs.gitlab.cn/jh/ci/caching/
   既介绍了 区别，还给了最佳实践
+2、变量 
+   gitlabci 基于环境变量，
+   预定义 CI/CD 变量
+   .gitlab-ci.yml 文件中的变量，有作用域
+   项目 CI/CD 变量。
+   群组 CI/CD 变量。
+   实例 CI/CD 变量。
+3、说一些常用的预设变量
+ 官方链接 https://docs.gitlab.cn/jh/ci/variables/predefined_variables.html
+    合并请求流水线的预定义变量
+        这些变量在以下情况下可用：
+        流水线是合并请求流水线。
+        合并请求已打开。
+     您应该避免覆盖预定义变量，因为它可能导致流水线出现意外行为。
+    CI_PROJECT_NAME	   项目目录的名称。
+    CI_MERGE_REQUEST_SOURCE_BRANCH_NAME	合并请求的源分支名称。
+    CI_MERGE_REQUEST_SOURCE_PROJECT_URL	合并请求的目标分支名称。
+      使用场景 
+      1、通过rules判断  目标分支是否为master 发布到生产环境
+      2、给产物镜像文件打tag可能用到sourceBranch
+    CI_MERGE_REQUEST_LABELS 合并请求的逗号分隔标签名称。
+      使用场景  通过判断label 做一些自动处理，如自动发布
+    CI_COMMIT_REF_NAME 项目的分支名或tag名
+    CI_COMMIT_REF_SLUG  CI_COMMIT_REF_NAME的小写形式。项目的分支名或tag名
+
+
+
+
+       
+    
+
+
+3、如何在流水线报错时发送通知
