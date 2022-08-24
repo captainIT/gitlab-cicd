@@ -1,0 +1,3 @@
+1、cache与artifacts的区别？
+  官方链接 https://docs.gitlab.cn/jh/ci/caching/
+  既介绍了 区别，还给了最佳实践
